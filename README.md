@@ -50,6 +50,7 @@ In a nutshell:
 - Enables UE Tx port antenna switching
 - Enables TM5 and TM9
 - Enables cross-carrier scheduling allowing signalling referring to a carrier to be transmitted over the signalling channel of another carrier
+- Enable 256 QAM UL
 
 ```patch
 --- ue cap qpr1
