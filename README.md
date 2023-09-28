@@ -39,6 +39,26 @@ mv /mnt/vendor/efs/nv_normal.bin.md5 /mnt/vendor/efs/nv_normal.bin.md5.old
 reboot
 ```
 
+## Syntax
+
+To set an nv item:
+
+```bash
+echo 'AT+GOOGSETNV="<NVITEM NAME>",<INDEX>,"<VALUE>"\r' > /dev/umts_router & cat /dev/umts_router
+
+# For example...
+echo 'AT+GOOGSETNV="NR.CONFIG.MODE",0,"11"\r' > /dev/umts_router & cat /dev/umts_router
+```
+
+To get an nv item:
+
+```bash
+echo 'AT+GOOGGETNV="<NVITEM NAME>"\r' > /dev/umts_router & cat /dev/umts_router
+
+# For example...
+echo 'AT+GOOGGETNV="NR.CONFIG.MODE"\r' > /dev/umts_router & cat /dev/umts_router
+```
+
 ## Changes
 
 As an example, here's the differences in a UE capability response on a Pixel 7 Pro connected to EE UK.
